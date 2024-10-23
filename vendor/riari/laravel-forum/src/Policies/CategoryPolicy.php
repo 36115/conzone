@@ -1,0 +1,77 @@
+<?php
+
+namespace TeamTeaTime\Forum\Policies;
+
+use Illuminate\Foundation\Auth\User;
+use TeamTeaTime\Forum\Models\Category;
+
+class CategoryPolicy
+{
+
+    public function view(User $user, Category $category): bool
+    {
+        return true;
+    }
+
+    public function edit(User $user, Category $category): bool
+    {
+        return in_array($user->role, ['Moderator', 'Admin']);
+    }
+
+    public function delete(User $user, Category $category): bool
+    {
+        return in_array($user->role, ['Moderator', 'Admin']);
+    }
+
+    public function createThreads(User $user, Category $category): bool
+    {
+        return true;
+    }
+
+    public function manageThreads(User $user, Category $category): bool
+    {
+        return $user->getKey() === $category->author_id
+            || $this->deleteThreads($user, $category)
+            || $this->restoreThreads($user, $category)
+            || $this->moveThreadsFrom($user, $category)
+            || $this->lockThreads($user, $category)
+            || $this->pinThreads($user, $category);
+    }
+
+    public function deleteThreads(User $user, Category $category): bool
+    {
+        return true;
+    }
+
+    public function restoreThreads(User $user, Category $category): bool
+    {
+        // return $user->role == 'Admin';
+        return in_array($user->role, ['Moderator', 'Admin']);
+    }
+
+    public function moveThreadsFrom(User $user, Category $category): bool
+    {
+        return $user->getKey() === $category->author_id || in_array($user->role, ['Moderator', 'Admin']);
+    }
+
+    public function moveThreadsTo(User $user, Category $category): bool
+    {
+        return $user->getKey() === $category->author_id || in_array($user->role, ['Moderator', 'Admin']);
+    }
+
+    public function lockThreads(User $user, Category $category): bool
+    {
+        // return $user->role == 'Admin';
+        return in_array($user->role, ['Moderator', 'Admin']);
+    }
+
+    public function pinThreads(User $user, Category $category): bool
+    {
+        return in_array($user->role, ['Moderator', 'Admin']);
+    }
+
+    public function markThreadsAsRead(User $user, Category $category): bool
+    {
+        return true;
+    }
+}

@@ -1,0 +1,18 @@
+// Bootstrap
+@import 'bootstrap/dist/css/bootstrap';
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400&display=swap');
+
+.fade-out {
+    animation: fadeOut 2s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity:1;
+    }
+    100% {
+        opacity:0;
+    }
+}

@@ -1,0 +1,32 @@
+{
+  "_axios-CCb-kr4I.js": {
+    "file": "assets/axios-CCb-kr4I.js",
+    "name": "axios"
+  },
+  "resources/forum/blade-bootstrap/js/forum.js": {
+    "file": "assets/forum-3gvRZuEN.js",
+    "name": "forum",
+    "src": "resources/forum/blade-bootstrap/js/forum.js",
+    "isEntry": true,
+    "imports": [
+      "_axios-CCb-kr4I.js"
+    ],
+    "css": [
+      "assets/forum-ClIfg9jR.css"
+    ]
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-DQt7BjG3.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "imports": [
+      "_axios-CCb-kr4I.js"
+    ]
+  },
+  "resources/sass/app.scss": {
+    "file": "assets/app-IgSVX-e0.css",
+    "src": "resources/sass/app.scss",
+    "isEntry": true
+  }
+}
