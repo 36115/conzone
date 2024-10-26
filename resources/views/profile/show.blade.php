@@ -38,7 +38,7 @@
     <div class="card mt-3 mb-4">
         <div class="card-body p-0">
             <div class="position-relative">
-                <img src="@if ($user->profile_banner) {{ asset($user->profile_banner) }} @else {{ asset('profile-banners/default.png') }} @endif" class="img-fluid user-select-none border rounded-4 w-100" style="height: 200px; object-fit: cover; border-bottom-left-radius: 0 !important; border-bottom-right-radius: 0 !important; background-color: var(--bs-card-bg);">
+                <img src="@if ($user->profile_banner) {{ asset($user->profile_banner) }} @else {{ asset('users/profile-banners/default.png') }} @endif" class="img-fluid user-select-none border rounded-4 w-100" style="height: 200px; object-fit: cover; border-bottom-left-radius: 0 !important; border-bottom-right-radius: 0 !important; background-color: var(--bs-card-bg);">
                 <div class="position-absolute rounded-4 top-0 start-0 w-100 h-100" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%); border-bottom-left-radius: 0 !important; border-bottom-right-radius: 0 !important;"></div>
                     <div class="position-absolute bottom-0 start-0 p-3 d-flex align-items-end">
                         <img src="@if ($user->profile_image) {{ asset($user->profile_image) }} @else {{ 'https://ui-avatars.com/api/?name='. urlencode($user->displayname) .'&background=random&bold=true' }} @if (!str_contains($user->displayname, ' ')) &length=1 @endif @endif" class="rounded-circle user-select-none border border-3 border-white" style="width: 100px; height: 100px; object-fit: cover; background-color: var(--bs-card-bg);">
