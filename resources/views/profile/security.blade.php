@@ -7,12 +7,12 @@
         {{-- <a class="nav-link" href="{{ route('profile.edit') }}">Profile</a> --}}
         <a class="nav-link active border-3 border-primary-subtle border-bottom" href="{{ route('profile.security') }}">Security</a> 
     </nav>
-    <div class="row justify-content-center mt-3 mb-4">
-        <div class="col-md-6">
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-6 mb-3">
             @include('profile.partials.update-password-form')
         </div>
 
-        <div class="col-md-5">
+        <div class="col-md-5 mb-3">
             @include('profile.partials.delete-user-form')
         </div>
     </div>
