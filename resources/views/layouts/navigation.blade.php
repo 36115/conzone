@@ -59,7 +59,7 @@
         </button>
 
         <div class="offcanvas offcanvas-end bg-body" tabindex="-1" id="offcanvasNavbar">
-            <div class="offcanvas-header py-3">
+            <div class="offcanvas-header py-3 pb-0">
                 <a class="navbar-brand user-select-none" href="/"><img width="300" src="@include ('layouts/brand')"></a>
 
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
