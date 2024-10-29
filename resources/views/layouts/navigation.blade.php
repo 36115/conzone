@@ -65,7 +65,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             
-            <div class="offcanvas-body pt-0">
+            <div class="offcanvas-body">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item d-flex align-items-center ms-2">
                         <a class="nav-link" aria-current="page" href="/"><i class="bi bi-house-door"></i> Home</a>
