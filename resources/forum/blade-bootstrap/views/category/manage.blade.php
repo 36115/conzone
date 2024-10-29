@@ -41,8 +41,8 @@
             item-key="id">
             <template #item="{element}">
                 <li class="list-group-item" :data-id="element.id">
-                    <a class="float-end btn btn-sm btn-danger ml-2" :href="element.route + '#modal=delete-category'">{{ trans('forum::general.delete') }}</a>
-                    <a class="float-end btn btn-sm btn-link ml-2" :href="element.route + '#modal=edit-category'">{{ trans('forum::general.edit') }}</a>
+                    <a class="btn btn-sm btn-danger rounded-pill float-end ml-2" :href="element.route + '#modal=delete-category'">{{ trans('forum::general.delete') }}</a>
+                    <a class="btn btn-sm btn-link rounded-pill float-end ml-2" :href="element.route + '#modal=edit-category'">{{ trans('forum::general.edit') }}</a>
                     <strong :style="{ color: element.color }">@{{ element.title }}</strong>
                     <div class="text-muted">@{{ element.description }}</div>
 
