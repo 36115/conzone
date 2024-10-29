@@ -19,7 +19,7 @@
 
             <div class="text-end">
                 <a href="{{ URL::previous() }}" class="btn btn-link">{{ trans('forum::general.cancel') }}</a>
-                <button type="submit" class="btn btn-primary rounded-pill px-5"><i class="bi bi-send"></i> {{ trans('forum::general.create') }}</button>
+                <button type="submit" class="btn btn-primary rounded-pill px-5"><i class="bi bi-plus-lg"></i> {{ trans('forum::general.create') }}</button>
             </div>
         </form>
     </div>
